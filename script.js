@@ -1,4 +1,4 @@
-console.log ("hello")
+// console.log ("hello")
 
 fetch("https://api.petfinder.com/v2/animals", {
     method: 'GET',

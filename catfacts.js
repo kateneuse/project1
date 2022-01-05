@@ -10,7 +10,7 @@ fetch ("https://cat-fact.herokuapp.com/facts",{
 })
 
 
-const button = document.getElementById("button");
+const button = document.getElementById("fun-fact-btn");
 
 button.addEventListener('click', function() {
 
@@ -21,11 +21,9 @@ function getFact() {
   .then(data => {
     let fact = JSON.parse(data).text
     console.log(fact)
-    var p = document.createElement("p");
-       var node = document.createTextNode(fact);
-       p.appendChild(node);
-
-       let facts = document.querySelector(".facts");
+    var displayEl = document.getElementById("display-fun-fact")
+    displayEl.textContent = fact
+       
        
       })
   }
