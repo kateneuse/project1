@@ -1,3 +1,7 @@
-body {
-    
+.display-the-fact {
+    padding: 25px;
+}
+#fun-fact-btn {
+    position: relative;
+    left: 38%;
 }
