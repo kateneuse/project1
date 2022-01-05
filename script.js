@@ -2,9 +2,22 @@ console.log ("hello")
 
 fetch("https://api.petfinder.com/v2/animals", {
     method: 'GET',
+    mode: 'cors',
+    //credentials:"omit",
     headers: {
-        'Content-type': 'application/json',
-        'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJFSHFqOW9Fb3FhUFlaMFR2TkJhSXhaV2hEUnYwVnU2cVdLTTJ3U0tLU3JmYkxkUGF2dSIsImp0aSI6IjBhNzg5MWVjMzY2NDM0ODQzOTQyNzA1MjhmNDk0N2RiMWIxYTU5YjRhNDA3ZDVkZjkyMjVlOWY0ZGZhM2UyYjBlMjdmMzBhZmM2ZGI5ZTc4IiwiaWF0IjoxNjQxMzI1MjMzLCJuYmYiOjE2NDEzMjUyMzMsImV4cCI6MTY0MTMyODgzMywic3ViIjoiIiwic2NvcGVzIjpbXX0.MbkElRW0amz-4MD6_f0iymtFvhjFJLtsOeLV4PwulTkluRgLKxz1L0q9vCOQfb4pBvWucBN0U-vg1cjBK4RXHhMT85GxYXJwMxjjGo1L2sRXMnS35oeR3OSji-FWtTqdkkAWNc4h_hrHEyDuhmDSHG3rUF7xU_hGJmbAG4SQBoMDlmFQ-X-EnbnrpAyNZpu8KOVGhU44cDtIeh-n36Jf0eD4OhGgfkN0P8jDyRoJJ466rCrsgoUnDny7ghI6p3FzhHwitsylgXJ188tjikf42vRrzPqk0k5Js5b1WCJ2TkAUpOLX-63XJQwUga8gFRKoIeFIOtiYKrAsGps61iRYyw`, // notice the Bearer before your token
+        // 'Content-type': 'application/json',
+        // 'Access-Control-Allow-Origin':"*",
+        'Authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJFSHFqOW9Fb3FhUFlaMFR2TkJhSXhaV2hEUnYwVnU2cVdLTTJ3U0tLU3JmYkxkUGF2dSIsImp0aSI6IjdhYjBhZWY0MzlkZDQ1MTdkYTUwN2ZjMjJmNzcyM2I2YjQ5MzIxZWQyZThhODRkZjFkMTljYjI0OWQyMTY4ZTgwNDJhM2FmMjQwMTZhMzYzIiwiaWF0IjoxNjQxMzM5MTMxLCJuYmYiOjE2NDEzMzkxMzEsImV4cCI6MTY0MTM0MjczMSwic3ViIjoiIiwic2NvcGVzIjpbXX0.AR3RE48hvHQepqH9gTX2s3iggsdBYZLRqNbDWleeJ1jy72xgfloREZBpBpiWx8jw5O2VTIBN4X1XwOmJwcqfAbD4e0iKikWiFwXQPztkIKipac9Q5CPbnUuF6Vj718AyvturMEvU4UIOxfD7DPsepjfjNN6GLfPkRoCShy_z8x7yiKJa5I-efBSR64DD4lwDx_dV6fk3xJY4hOtWs64EGUmr-zV7jHSD1pNnW0mhR05rkukWuLyrgghuJt9hUCpiRqNnW-LTM7pp7YBAjhAOT2LOXrDafMqfMFUjm1AEQBDPDnWGWtiBwqHY2ALZQSKImDdey45cL01nPN9rLbbH5A"
+
     },
-    
-}).then(function(response){console.log})
+})
+
+.then(function(res){
+    return res.json()
+})
+.then(function(data){
+    console.log(data)
+})
+.catch(function(err){
+    console.error(err)
+})
