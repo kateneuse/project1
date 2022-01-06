@@ -5,3 +5,17 @@
     position: relative;
     left: 38%;
 }
+.pet-box-size {
+    max-width: 400px;
+    max-height: 400px;
+    justify-self: center;
+}
+.pet-container {
+    /* border: solid 2px limegreen; */
+    max-width: 405px;
+    max-height: 405px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-image: linear-gradient(45deg, rgba(128, 224, 125, 0.473),rgba(0, 128, 0, 0.384), rgba(136, 197, 144, 0.336)); */
+}
