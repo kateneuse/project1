@@ -43,11 +43,34 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
+    <div id="modal" class="modal text-center rounded-md">
+      <div class="modal-content">
+        <span class="close">&times;</span>
 
+        <!-- modal-header -->
+        <div class="modal-header">
+          <h2>Cat Facts</h2>
+          </div>
+          <!-- modal-body -->
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="animal_type">Animal Type</label>
+                <input type="text" class="form-control" id="animal_type"><br>
+                <small id="small" class="form-text text-muted">Options: Cat, Dog, Horse & Snail</small> 
+              </div>
+              <div class="form-group">
+                <label for="num_facts">Number of Facts</label>
+                <input type="number" class="form-control" id="num_facts"><br>
+                <small id="small" class="form-text text-muted">Max: 5</small>
 
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary rounde-md" id="generate">Generate</button>
+            </div>
+          </div>
+          
 
   <script src="script.js"></script>
   <script src="catfacts.js"></script>
