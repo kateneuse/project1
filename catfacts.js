@@ -45,5 +45,28 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+let generate_btn = document.querySelector("#generate");
+let num_facts = document.querySelector("#num_facts");
+let animal_type = document.querySelector("#animal_type");
 
+generate_btn.addEventListener("click", function() {
+  let animal_value = animal_type.value.toLowerCase()
 
+  if(parseInt(num_facts.value) > 5) {
+    alert("Max is 5")
+  }
+  function fetch() {
+    fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=${animal_type}&amount=${num_facts}')
+    .then(response => response.text()) 
+    .then(data => {
+      let fact = JSON.parse(data).text
+      console.log(fact)
+      var displayEl = document.getElementById("result")
+      displayEl.textContent = fact
+
+    })
+  }
+
+  fetch()
+
+})
