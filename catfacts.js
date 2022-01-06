@@ -30,4 +30,20 @@ function getFact() {
 getFact()
 })
 
+// modal //
+
+var modal = document.getElementById("modal");
+var btn = document.getElementById("fun-fact-btn");
+var span = document.getElementsByClassName("close"[0]);
+
+// modal opens when button is clicked
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// modal closes when span (x) is clicked
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
 
