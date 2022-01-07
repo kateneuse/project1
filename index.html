@@ -11,31 +11,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <header>
-  <h1>HEADER &#128008;</h1>
+  <h1>Fun facts &#128008;</h1>
 </header>
 <body>
   <div
     class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'>
     <div class='w-full max-w-lg px-10 py-8 mx-auto'>
       <div class='max-w-md mx-auto space-y-6'>
-
-        <div class="bg-white p-4 w-96 rounded-md">
-          <h1 class="text-lg font-bold text-gray-500">Search pets by zipcode</h1>
-          <div class="mt-5 mb-2 border-2 py-1 px-3 flex justify-between rounde-md rounded-md">
-            <input class="flex-grow outline-none text-gray-600 focus:text-blue-600" type="number" id="search"
-              placeholder="Enter zipcode" />
-            <spa>
-              <svg xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-gray-400 hover:text-blue-400 transition duration-100 cursor-pointer" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </spa>
-          </div>
-        </div>
-        <div class="bg-white p-4 w-96 rounded-md">
-          <h1 class="text-center text-lg font-bold text-gray-500">Cat fun facts</h1>
+        <div class="bg-white p-4 w-96 rounded-md" id="facts-box">
+          <h1 class="text-center text-lg font-bold text-gray-500">Animal fun facts</h1>
           <p id="display-fun-fact" class="display-the-fact"></p>
           <button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             id="fun-fact-btn">
@@ -51,7 +35,7 @@
 
         <!-- modal-header -->
         <div class="modal-header">
-          <h2>Cat Facts</h2>
+          <h2>Animal Fun Facts</h2>
           </div>
           <!-- modal-body -->
           <div class="modal-body">
