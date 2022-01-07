@@ -11,7 +11,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<header>
+  <h1>Fun facts &#128008;</h1>
+</header>
+
 <body>
+  <div class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'
+    style="display: block;">
+
+<!-- <body>
   <header>
     <h1>FUN FACTS &#128008;</h1>
     <nav>
@@ -23,12 +31,28 @@
     </nav>
   </header>
   <div
-    class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'>
+    class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'> -->
     <div class='w-full max-w-lg px-10 py-8 mx-auto'>
       <div class='max-w-md mx-auto space-y-6'>
         <div class="bg-white p-4 w-96 rounded-md" id="facts-box">
           <h1 class="text-center text-lg font-bold text-gray-500">Animal fun facts</h1>
           <p id="display-fun-fact" class="display-the-fact"></p>
+          <form id="fun-fact-form">
+            <div class="form-group">
+              <div class="display-funfact-box">
+                <label for="animal_type">Animal Type</label>
+                <input type="text" class="form-control" id="animal_type">
+                <small id="small" class="form-text text-muted">Options: Cat, Dog, Horse & Snail</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="display-funfact-box">
+                <label for="num_facts">Number of Facts</label>
+                <input type="number" class="form-control" id="num_facts">
+                <small id="small" class="form-text text-muted">Max: 5</small>
+              </div>
+            </div>
+          </form>
           <button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             id="fun-fact-btn">
             Get Facts
@@ -37,17 +61,22 @@
         </div>
       </div>
     </div>
-    <div id="modal" class="modal text-center rounded-md">
+    <div>
+      <div id="modal" class="modal text-center rounded-md">
+        <span id="close">&times;</span>
+        <div class="modal-content">
+<!--     <div id="modal" class="modal text-center rounded-md">
       <div class="modal-content">
-        <div id="close">X</div>
+        <div id="close">X</div> -->
 
-        <!-- modal-header -->
-        <div class="modal-header">
-          <h2>Animal Fun Facts</h2>
+          <!-- modal-header -->
+          <div class="modal-header">
+            <h2>Animal Fun Facts</h2>
           </div>
           <!-- modal-body -->
           <div class="modal-body">
-            <form>
+            <p id="result" class="display-animal-fact"></p>
+<!--             <form>
               <div class="form-group">
                 <label for="animal_type">Animal Type</label>
                 <input type="text" class="form-control" id="animal_type"><br>
@@ -64,13 +93,13 @@
               <button type="button" class="btn btn-primary rounde-md" id="generate">Generate</button>
               <button type="button" class="btn btn-primary rounde-md" id="clear-history">Clear History</button>
 
-            </div>
+            </div> -->
           </div>
-          
-          <p id="result"></p>
-
-  <script src="script.js"></script>
-  <script src="catfacts.js"></script>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="catfacts.js"></script>
 </body>
 
 </html>
