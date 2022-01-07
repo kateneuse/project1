@@ -1,5 +1,5 @@
 var apiKey = "a24b853d-07cb-41e6-92bc-bba4d171ec08"
-
+var catcomments = document.getElementById("catcomment")
 fetch("https://api.thecatapi.com/v1/images/search?limit=25",{
     method: 'GET',
     //mode: 'CORS',
@@ -12,7 +12,10 @@ fetch("https://api.thecatapi.com/v1/images/search?limit=25",{
 .then (function(data){
     console.log(data)
 })
- 
+
+  localStorage.setItem("catcomments","catcomment")
+  localStorage.getItem("catcomments")
+
 //console.log ("hello")
 
 //fetch("https://api.petfinder.com/v2/animals", {
