@@ -2,8 +2,17 @@ header h1{
     display: flex;
     justify-content: center;
     font-size: 40px;
+    font-weight: bold;
 }
-
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    display: inline;
+    font-size: 25px;
+    padding: 20px;
+}
 /* main-page*/
 
 .display-the-fact {
@@ -11,7 +20,7 @@ header h1{
 }
 #fun-fact-btn {
     position: relative;
-    left: 38%;
+    left: 25%;
 }
 
 .pet-box-size {
@@ -37,20 +46,20 @@ header h1{
     position: fixed;
     z-index: 1; /* sit on top */
     width: 35%;
-    height: 35%;
+    height: auto;
     padding: 50px;
     background-color: rgb(223, 203, 201);
 }
 
-.close {
+#close {
     color: black;
     float: right;
     font-size: 25px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
     color: green;
     text-decoration: none;
     cursor: pointer;
@@ -65,6 +74,8 @@ ol, ul {
     list-style: auto;
 }
 #facts-box {
-    position: relative;
-    top: -320px;
+    display: flex;
+    align-items: center;
+
+    width: auto;
 }
