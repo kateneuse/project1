@@ -35,12 +35,13 @@ let num_facts = document.querySelector("#num_facts");
 let animal_type = document.querySelector("#animal_type");
 let closeEl = document.querySelector("#close");
 const clearEl = document.getElementById("clear-history")
-let searchHistory = JSON.parse(localStorage.getItem("generate")) || [];
+const historyEl = document.getElementById("history");
+let searchHistory = JSON.parse(localStorage.getItem("fun-fact-btn")) || [];
 
 
 generate_btn.addEventListener("click", function () {
   let animal_value = animal_type.value.toLowerCase();
-  //console.log(animal_value);
+  console.log(animal_value);
 
   if (parseInt(num_facts.value) > 5) {
     alert("Max is 5")
@@ -48,10 +49,14 @@ generate_btn.addEventListener("click", function () {
   var num_value = num_facts.value;
   fetchCatApi(animal_value, num_value)
 
-
-  
-
+  // save to local storage
+  const generateFact = num_facts.value + " " + animal_type.value + " facts";
+  console.log(generateFact)
+  searchHistory.push(generateFact);
+  localStorage.setItem("generate", JSON.stringify(searchHistory));
+  renderSearchHistory();
 })
+
 closeEl.onclick = function (){
   modal.style.display = "none";
   var displayEl = document.getElementById("result")
@@ -78,15 +83,41 @@ function fetchCatApi(animal_value, num_value) {
 }
 
 
-//local storage//
-generate_btn.addEventListener("click", function () {
-  const generateFact = num_facts.value + animal_type.value;
-  fetchCatApi(generateFact);
-  searchHistory.push(generateFact);
-  localStorage.setItem(generate, JSON.stringify(searchHistory));
-  renderSearchHistory();
 
+//local storage//
+// generate_btn.addEventListener("click", function () {
+//   const generateFact = num_facts.value + animal_type.value;
+//   console.log(generateFact)
+//   searchHistory.push(generateFact);
+//   localStorage.setItem(generate, JSON.stringify(searchHistory));
+//   renderSearchHistory();
+  
+
+// })
+
+
+//clear history button 
+clearEl.addEventListener("click", function () {
+  localStorage.clear();
+  searchHistory = [];
+  renderSearchHistory();
 })
 
-
-
+function renderSearchHistory() {
+  historyEl.innerHTML = "";
+  for (let i=0; i < searchHistory.length;i++) {
+    const historyItem = document.createElement("input");
+    historyItem.setAttribute("type", "text");
+    historyItem.setAttribute("readonly", true);
+    historyItem.setAttribute("class", "form-control d-block bg-white");
+    historyItem.setAttribute("value", searchHistory[i]);
+    historyItem.addEventListener("click", function () {
+        fetchCatApi(historyItem.value);
+    })
+    historyEl.append(historyItem);
+}
+}
+renderSearchHistory();
+    if (searchHistory.length > 0) {
+        fetchCatApi(searchHistory[searchHistory.length - 1]);
+    }
