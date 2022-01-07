@@ -23,6 +23,9 @@ nav li{
     left: 40%;
 }
 
+#clear-history
+{float: right;}
+
 .pet-box-size {
     max-width: 400px;
     max-height: 400px;
