@@ -29,9 +29,14 @@ span.onclick = function () {
 
 
 
+
 let generate_btn = document.querySelector("#fun-fact-btn");
 let num_facts = document.querySelector("#num_facts");
 let animal_type = document.querySelector("#animal_type");
+let close = document.querySelector("#close");
+const clearEl = document.getElementById("clear-history")
+let searchHistory = JSON.parse(localStorage.getItem("generate")) || [];
+
 
 generate_btn.addEventListener("click", function () {
   let animal_value = animal_type.value.toLowerCase();
@@ -43,8 +48,13 @@ generate_btn.addEventListener("click", function () {
   var num_value = num_facts.value;
   fetchCatApi(animal_value, num_value)
 
-})
 
+  
+
+})
+close.onclick = function (){
+  modal.style.display = "none";
+}
 function fetchCatApi(animal_value, num_value) {
   //console.log(animal_value, num_facts);
   fetch(`https://cat-fact.herokuapp.com/facts/random?animal_type=${animal_value}&amount=${num_value}`)
@@ -63,6 +73,17 @@ function fetchCatApi(animal_value, num_value) {
     }
     )
 }
+
+
+//local storage//
+generate_btn.addEventListener("click", function () {
+  const generateFact = num_facts.value + animal_type.value;
+  fetchCatApi(generateFact);
+  searchHistory.push(generateFact);
+  localStorage.setItem(generate, JSON.stringify(searchHistory));
+  renderSearchHistory();
+
+})
 
 
 
