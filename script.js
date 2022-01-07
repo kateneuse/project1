@@ -9,7 +9,7 @@ function getPic() {
         .then(data => {
             console.log(data); 
             // console.log(data[0].url)
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < 1; i++) {
                 var displayEl = document.getElementById('display')
                 information = data[i].url;
                 console.log(information);

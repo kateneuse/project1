@@ -24,7 +24,7 @@ btn.onclick = function () {
 span.onclick = function () {
   modal.style.display = "none";
   var displayEl = document.getElementById("result")
-  displayEl.textContent = '.'
+  displayEl.textContent = ''
 }
 
 
@@ -33,7 +33,7 @@ span.onclick = function () {
 let generate_btn = document.querySelector("#fun-fact-btn");
 let num_facts = document.querySelector("#num_facts");
 let animal_type = document.querySelector("#animal_type");
-let close = document.querySelector("#close");
+let closeEl = document.querySelector("#close");
 const clearEl = document.getElementById("clear-history")
 let searchHistory = JSON.parse(localStorage.getItem("generate")) || [];
 
@@ -52,8 +52,11 @@ generate_btn.addEventListener("click", function () {
   
 
 })
-close.onclick = function (){
+closeEl.onclick = function (){
   modal.style.display = "none";
+  var displayEl = document.getElementById("result")
+  displayEl.textContent = ''
+
 }
 function fetchCatApi(animal_value, num_value) {
   //console.log(animal_value, num_facts);
