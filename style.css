@@ -20,7 +20,7 @@ nav li{
 }
 #fun-fact-btn {
     position: relative;
-    left: 25%;
+    left: 40%;
 }
 
 .pet-box-size {
@@ -51,8 +51,8 @@ nav li{
 
     height: auto;
     padding: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 33%;
+    margin-right: 33%;
     background-color: rgb(212 251 170);
 }
 
