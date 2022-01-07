@@ -10,10 +10,18 @@
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<header>
-  <h1>Fun facts &#128008;</h1>
-</header>
+
 <body>
+  <header>
+    <h1>FUN FACTS &#128008;</h1>
+    <nav>
+      <ul>
+        <li><a href="facts-box">Cat Facts</a></li>
+        <li><a href="">Picture Generator</a></li>
+  
+      </ul>
+    </nav>
+  </header>
   <div
     class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'>
     <div class='w-full max-w-lg px-10 py-8 mx-auto'>
@@ -31,7 +39,7 @@
     </div>
     <div id="modal" class="modal text-center rounded-md">
       <div class="modal-content">
-        <span id="close">&times;</span>
+        <div id="close">X</div>
 
         <!-- modal-header -->
         <div class="modal-header">
@@ -54,6 +62,8 @@
             </form>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary rounde-md" id="generate">Generate</button>
+              <button type="button" class="btn btn-primary rounde-md" id="clear-history">Clear History</button>
+
             </div>
           </div>
           
