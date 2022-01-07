@@ -24,7 +24,7 @@ btn.onclick = function () {
 span.onclick = function () {
   modal.style.display = "none";
   var displayEl = document.getElementById("result")
-  displayEl.textContent = ''
+  displayEl.textContent = '.'
 }
 
 

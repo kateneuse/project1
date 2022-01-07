@@ -1,23 +1,29 @@
-// console.log ("hello")
+function getPic() {
+    fetch("https://api.thecatapi.com/v1/images/search?limit=25", {
+        method: 'GET',
+        //mode: 'CORS',
+        headers: {
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); 
+            // console.log(data[0].url)
+            for (i = 0; i < 5; i++) {
+                var displayEl = document.getElementById('display')
+                information = data[i].url;
+                console.log(information);
+                // displayEl.textContent = information
+                imgEl = document.createElement('img');
+                displayEl.appendChild(imgEl);
+                imgEl.src = information
+            }
+        })
 
-// fetch("https://api.petfinder.com/v2/animals", {
-//     method: 'GET',
-//     mode: 'cors',
-//     //credentials:"omit",
-//     headers: {
-//         // 'Content-type': 'application/json',
-//         // 'Access-Control-Allow-Origin':"*",
-//         'Authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJFSHFqOW9Fb3FhUFlaMFR2TkJhSXhaV2hEUnYwVnU2cVdLTTJ3U0tLU3JmYkxkUGF2dSIsImp0aSI6IjY0YjhhNWRmMGYxZTIzYjYzMjA3ZGY1YTViNjc4NjkzY2MxODRkYzQ5MzdjOTA3OWVlYTg0Yjk5N2MzMjkzNjBiNzgyNjU4NWFiNTE0ZWIxIiwiaWF0IjoxNjQxNDAwNzQ3LCJuYmYiOjE2NDE0MDA3NDcsImV4cCI6MTY0MTQwNDM0Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.nWgZwn-rC7DgjJETPi1YNJ1zmAVxESvJUN-L0VROo6WJGxg_BsDpBRs4r2PSB43FUCuTpcOK4gWjIk0eUg8F6H26O19X3ffrJ_oJlD5uaAF8JUtfqUh7nuPWM5W7lYgabztUVV8VSEBfK5OkURHrBcsqvI8gQpupoUlzAG1M8Z6SCGPRSSgPRBjlqMpaJ1YTcoAbGFT414SNEKEppCODa3fKEmbHDP3bxL31Ey8du5dQXlAkJNJwdp0wCWLNAXVfvZNVqXIpPpcHJzfjabS-EMqrsZXxQlm1qB0VbHNBnL2s0soZATd2YKHEEMIzsYruveh-yHWsLEOV0HcEkFq-lg"
-
-//     },
-// })
-
-// .then(function(res){
-//     return res.json()
-// })
-// .then(function(data){
-//     console.log(data)
-// })
-// .catch(function(err){
-//     console.error(err)
-// })
+}
+var btnEl = document.getElementById('btn')
+btnEl.addEventListener('click', function () {
+    getPic()
+    var displayEl = document.getElementById('display')
+    displayEl.textContent = ''
+})

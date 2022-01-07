@@ -20,7 +20,7 @@ nav li{
 }
 #fun-fact-btn {
     position: relative;
-    left: 25%;
+    left: 40%;
 }
 
 .pet-box-size {
@@ -51,8 +51,8 @@ nav li{
 
     height: auto;
     padding: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 33%;
+    margin-right: 33%;
     background-color: rgb(212 251 170);
 }
 
@@ -124,4 +124,31 @@ small {
     align-items: center;
 
     width: auto; */
+}
+.picture-container {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    align-items: center;
+    max-width: 80%;
+}
+.picture-btn {
+    background: linear-gradient(90deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin-top: 50px;
+    padding: 25px;
+    font-weight: 1000;
+    font-size: larger;
+    border: palegreen solid 2px;
+}
+#display {
+    align-items: center;
+    display: block;
+}
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
