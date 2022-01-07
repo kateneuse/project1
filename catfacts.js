@@ -14,7 +14,7 @@ fetch("https://cat-fact.herokuapp.com/facts", {
 
 var modal = document.getElementById("modal");
 var btn = document.getElementById("fun-fact-btn");
-var span = document.getElementsByClassName("close");
+var span = document.getElementById("close");
 
 // modal opens when button is clicked
 btn.onclick = function () {
@@ -23,11 +23,13 @@ btn.onclick = function () {
 // modal closes when span (x) is clicked
 span.onclick = function () {
   modal.style.display = "none";
+  var displayEl = document.getElementById("result")
+  displayEl.textContent = ''
 }
 
 
 
-let generate_btn = document.querySelector("#generate");
+let generate_btn = document.querySelector("#fun-fact-btn");
 let num_facts = document.querySelector("#num_facts");
 let animal_type = document.querySelector("#animal_type");
 
