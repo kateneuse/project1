@@ -19,12 +19,12 @@ In this project, [Tailwind](https://tailwindui.com/) was choosen to create this 
 * There are two button feature. 
     * One is the "Get Facts" button which will generate fun facts depending on user input. A modal will pop up to display the facts. When user close the modal or the pop up, everything will be delete. The reasoning was to provide a clean pop up when user generate a new search. 
     * Part of the feature is to track the history of user input. "Clear History" button was coded to clear all user input history. 
-* Here is the display of how it will look like. [Animal Fun Facts feature](assets/animalfunfacts.png)
+* Here is the display of how it will look like. ![Animal Fun Facts feature](assets/animalfunfacts.png)
 ### Random cat picture generator
 * One other feature in Project1 was the random cat picture generator. This feature will display one random picture using API from [thecatapi.com](https://docs.thecatapi.com/) when the "Cat Picture" is clicked. 
 * Code was also written to only show one picture each time user click on button. 
 * Although, it say cat picture, but application sometime will also generate gif as well. 
-* The display shown is an example of how the "Cat Picture" feature look. [Cat Picture feature](assets/cat-picture-feature.png) 
+* The display shown is an example of how the "Cat Picture" feature look. ![Cat Picture feature](assets/cat-picture-feature.png) 
 ## Future Development 
 * Provide more than just cat picture. Include all four animal or more. 
 * Give user option to choose between picture and gif or both. 
