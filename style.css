@@ -4,6 +4,22 @@ header h1{
     font-size: 40px;
     font-weight: bold;
 }
+#background {
+    background-image: url(./assets/leopard.jpeg);
+    opacity: 87%;
+}
+#history {
+    justify-content: center;
+    display: grid;
+}
+
+#display {
+    padding-bottom: 30px;
+}
+
+#btn {
+    padding-top: 30px;
+}
 nav {
     display: flex;
     justify-content: center;
