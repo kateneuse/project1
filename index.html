@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project1 Animal facts and cat picture</title>
+
+  <title>Fun Fact </title>
+
   <!-- tailwind CSS link -->
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -25,26 +27,14 @@
 <body>
   <div class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'
     style="display: block;" id="background">
-
-    <!-- <body>
-  <header>
-    <h1>FUN FACTS &#128008;</h1>
-    <nav>
-      <ul>
-        <li><a href="facts-box">Cat Facts</a></li>
-        <li><a href="">Picture Generator</a></li>
-  
-      </ul>
-    </nav>
-  </header>
-  <div
-    class='flex items-center justify-center min-h-screen from-green-100 via-green-300 to-green-500 bg-gradient-to-br'> -->
     <div class='w-full max-w-lg px-10 py-8 mx-auto'>
       <div class='max-w-md mx-auto space-y-6'>
-        <div class="bg-black p-4 w-96 rounded-md" id="facts-box">
-          <h1 class="text-center text-lg font-bold text-yello-500">Animal fun facts</h1>
+        <!-- Fun facts box-->
+        <div class="bg-white p-4 w-96 rounded-md" id="facts-box">
+          <h1 class="text-center text-lg font-bold text-gray-500">Animal fun facts</h1>
           <p id="display-fun-fact" class="display-the-fact"></p>
           <form id="fun-fact-form">
+            <!-- Animal type form-->
             <div class="form-group">
               <div class="display-funfact-box">
                 <label for="animal_type">Animal Type</label>
@@ -52,6 +42,7 @@
                 <small id="small" class="form-text text-muted">Options: Cat, Dog, Horse & Snail</small>
               </div>
             </div>
+            <!-- Number of facts form -->
             <div class="form-group">
               <div class="display-funfact-box">
                 <label for="num_facts">Number of Facts</label>
@@ -60,25 +51,26 @@
               </div>
             </div>
           </form>
-          <button class="text-center bg-yellow-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full"
+          <!-- Get Facts button-->
+          <button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             id="fun-fact-btn">
             Get Facts
           </button>
-          <button type="button" class="text-center bg-yellow-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full" id="clear-history">Clear History
+          <!-- Clear History button-->
+          <button type="button" class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" id="clear-history">Clear History
 
           </button>
         </div>
       </div>
     </div>
     <div>
+      <!-- form where search history will display-->
       <form id="history"></form>
+
+    <!-- modal -->
       <div id="modal" class="modal text-center rounded-md">
         <span id="close">&times;</span>
         <div class="modal-content">
-          <!--     <div id="modal" class="modal text-center rounded-md">
-      <div class="modal-content">
-        <div id="close">X</div> -->
-
           <!-- modal-header -->
           <div class="modal-header">
             <h2>Animal Fun Facts</h2>
@@ -86,29 +78,12 @@
           <!-- modal-body -->
           <div class="modal-body">
             <p id="result" class="display-animal-fact"></p>
-            <!--             <form>
-              <div class="form-group">
-                <label for="animal_type">Animal Type</label>
-                <input type="text" class="form-control" id="animal_type"><br>
-                <small id="small" class="form-text text-muted">Options: Cat, Dog, Horse & Snail</small> 
-              </div>
-              <div class="form-group">
-                <label for="num_facts">Number of Facts</label>
-                <input type="number" class="form-control" id="num_facts"><br>
-                <small id="small" class="form-text text-muted">Max: 5</small>
-
-              </div>
-            </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary rounde-md" id="generate">Generate</button>
-              <button type="button" class="btn btn-primary rounde-md" id="clear-history">Clear History</button>
-
-            </div> -->
           </div>
         </div>
       </div>
     </div>
     <div>
+      <!-- Picture generator-->
       <div class="picture-container">
         <button id="btn" class="picture-btn">Cat Picture</button>
 

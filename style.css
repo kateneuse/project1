@@ -1,3 +1,4 @@
+/* website title */
 header h1{
     display: flex;
     justify-content: center;
@@ -22,6 +23,7 @@ header h1{
 #btn {
     padding-top: 30px;
 }
+/* navbar */
 nav {
     display: flex;
     justify-content: center;
@@ -32,33 +34,50 @@ nav li{
     font-size: 25px;
     padding: 20px;
 }
-/* main-page*/
 
-.display-the-fact {
+/* cat generator img */
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* list items for facts */
+ol, ul {
+    list-style: auto;
+}
+ol {
+    display: block;
+}
+
+/* small text under user input */
+small {
+    background: linear-gradient(45deg,white ,palegreen, rgb(105, 194, 105), white);
+    
+}
+
+
+/* .display-the-fact {
     padding: 12px;
-}
-#fun-fact-btn {
-    position: relative;
-    left: 40%;
-}
+} */
 
-#clear-history
-{float: right;}
-
-.pet-box-size {
+/* .pet-box-size {
     max-width: 400px;
     max-height: 400px;
     justify-self: center;
-}
+} */
+
+/* 
 .pet-container {
-    /* border: solid 2px limegreen; */
     max-width: 405px;
     max-height: 405px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    /* background-image: linear-gradient(45deg, rgba(128, 224, 125, 0.473),rgba(0, 128, 0, 0.384), rgba(136, 197, 144, 0.336)); */
-}
+}  */
 
 
 /* modal CSS */
@@ -75,15 +94,104 @@ nav li{
     padding: 50px;
     margin-left: 33%;
     margin-right: 33%;
-    background-color: rgb(0, 0, 0);
-    color: goldenrod;
+    background-color: rgb(212 251 170);
 }
 
+
+/* number of facts form */
+.display-funfact-box {
+    display: block;
+    text-align: center;
+}
+
+
+
+/* modal content*/
+.modal-content {
+    height: fit-content;
+    text-align: justify;
+
+}
+
+/* container for picture generator*/
+.picture-container {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+/* Cat Picture button */
+.picture-btn {
+    background: linear-gradient(90deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin-top: 50px;
+    padding: 25px;
+    font-weight: 1000;
+    font-size: larger;
+    border: palegreen solid 2px;
+}
+
+/* where the generated picture will display */
+
+#display {
+    align-items: center;
+    display: block;
+}
+/* leopard print background image */
+#background {
+    background-image: url(./assets/leopard.jpeg);
+    opacity: 87%;
+}
+/* input history */
+#history {
+    justify-content: center;
+    display: grid;
+}
+/* picture generator display */
+#display {
+    padding-bottom: 30px;
+}
+/* cat picture button */
+#btn {
+    padding-top: 30px;
+}
+/* border around user inputs */
+#fun-fact-form {
+    border: solid 2px #835d1994;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+/* input for number of facts */
+#num_facts {
+    display: block;
+    border: 1px solid;
+    background: linear-gradient(45deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin: auto;
+}
+
+/* user input for animal type */
+#animal_type {
+    display: block;
+    border: 1px solid;
+    background: linear-gradient(45deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin: auto;
+}
+
+/* white box behind user input */
+#facts-box {
+
+    position: relative;
+    
+}   
+
+/* X in facts window */
 #close {
     position: relative;
     top: -40px;
     right: -20px;
-    color: goldenrod;
+    color: black;
     float: right;
     font-size: 25px;
     font-weight: bold;
@@ -96,83 +204,11 @@ nav li{
     cursor: pointer;
 }
 
-#generate {
-    background-color: rgb(176, 207, 236);
-    padding: 5px;
-    border: 2px solid black;
-}
-ol, ul {
-    list-style: auto;
-}
-ol {
-    display: block;
-}
-#facts-box {
-
+/* Get Facts button */
+#fun-fact-btn {
     position: relative;
-    
-}   
-.display-funfact-box {
-    display: block;
-    text-align: center;
-    background-color: black;
-    color: goldenrod;
+    left: 40%;
 }
-#animal_type {
-    display: block;
-    border: 1px solid;
-    background: linear-gradient(45deg,crimson, rgba(132,28,0), crimson);
-    margin: auto;
-    color: black;
-}
-small {
-    background: linear-gradient(45deg,rgb(132,28,0) ,crimson, rgb(132,28,0), crimson);
-    
-}
-#num_facts {
-    display: block;
-    border: 1px solid;
-    background: linear-gradient(45deg,crimson, rgb(132,28,0), crimson , rgb(321,28,0));
-    margin: auto;
-    color: black;
-}
-#fun-fact-form {
-    border: solid 2px #835d1994;
-    padding: 5px;
-    margin-bottom: 15px;
-}
-.modal-content {
-    height: fit-content;
-    text-align: justify;
-/*     display: flex;
-    align-items: center;
-
-    width: auto; */
-}
-.picture-container {
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    align-items: center;
-    max-width: 80%;
-}
-.picture-btn {
-    background: linear-gradient(90deg,crimson, rgba(132, 28, 0), crimson);
-    margin-top: 50px;
-    padding: 25px;
-    font-weight: 1000;
-    font-size: larger;
-    border: rgb(0, 0, 0) solid 2px;
-}
-#display {
-    align-items: center;
-    display: block;
-}
-img {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* clear history button */
+#clear-history
+{float: right;}
