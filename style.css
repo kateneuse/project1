@@ -160,6 +160,7 @@ small {
     border: 1px solid;
     background: linear-gradient(45deg,crimson, rgb(132,28,0), crimson);
     margin: auto;
+    color:black
 }
 
 /* white box behind user input */
