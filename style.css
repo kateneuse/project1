@@ -4,6 +4,22 @@ header h1{
     font-size: 40px;
     font-weight: bold;
 }
+#background {
+    background-image: url(./assets/leopard.jpeg);
+    opacity: 87%;
+}
+#history {
+    justify-content: center;
+    display: grid;
+}
+
+#display {
+    padding-bottom: 30px;
+}
+
+#btn {
+    padding-top: 30px;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -16,12 +32,15 @@ nav li{
 /* main-page*/
 
 .display-the-fact {
-    padding: 25px;
+    padding: 12px;
 }
 #fun-fact-btn {
     position: relative;
-    left: 25%;
+    left: 40%;
 }
+
+#clear-history
+{float: right;}
 
 .pet-box-size {
     max-width: 400px;
@@ -42,16 +61,24 @@ nav li{
 /* modal CSS */
 
 .modal {
+    bottom: 120px;
     display: none;
     position: fixed;
     z-index: 1; /* sit on top */
-    width: 35%;
+
+    width: auto;
+
     height: auto;
     padding: 50px;
-    background-color: rgb(223, 203, 201);
+    margin-left: 33%;
+    margin-right: 33%;
+    background-color: rgb(212 251 170);
 }
 
 #close {
+    position: relative;
+    top: -40px;
+    right: -20px;
     color: black;
     float: right;
     font-size: 25px;
@@ -73,9 +100,74 @@ nav li{
 ol, ul {
     list-style: auto;
 }
+ol {
+    display: block;
+}
 #facts-box {
-    display: flex;
+
+    position: relative;
+    
+}   
+.display-funfact-box {
+    display: block;
+    text-align: center;
+}
+#animal_type {
+    display: block;
+    border: 1px solid;
+    background: linear-gradient(45deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin: auto;
+}
+small {
+    background: linear-gradient(45deg,white ,palegreen, rgb(105, 194, 105), white);
+    
+}
+#num_facts {
+    display: block;
+    border: 1px solid;
+    background: linear-gradient(45deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin: auto;
+}
+#fun-fact-form {
+    border: solid 2px #835d1994;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.display-animal-fact {
+    
+}
+.modal-content {
+    height: fit-content;
+    text-align: justify;
+/*     display: flex;
     align-items: center;
 
-    width: auto;
+    width: auto; */
+}
+.picture-container {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    align-items: center;
+    max-width: 80%;
+}
+.picture-btn {
+    background: linear-gradient(90deg,palegreen, rgba(101, 187, 101, 0.87), white);
+    margin-top: 50px;
+    padding: 25px;
+    font-weight: 1000;
+    font-size: larger;
+    border: palegreen solid 2px;
+}
+#display {
+    align-items: center;
+    display: block;
+}
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
